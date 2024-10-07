@@ -1,14 +1,11 @@
 # this script is trying to find non-NaN/NaN numbers for specific variable in the nc file
 #
-# source("/ccc/work/cont003/dsm/cheny/R/function/find_nan.R")
-# find(nc_var="temp_sol", nc_file="put your nc file path here"
 
 find_nan <- function (
 nc_var="temp_sol",
 nc_file="/ccc/store/cont003/dsm/cheny/Restart_RGRID/ASPINd/SRF/Restart/ASPINd_15471231_sechiba_rest.nc") {
 
 print("Land-point from rgrid map should be 8049.")
-print(paste("check NaN numbers in variable", nc_var))
 # load netcdf library
 library(ncdf)
 nc_file  <- open.ncdf(nc_file)
